@@ -82,7 +82,7 @@ data5 = data5[data5[DATE_TIME].dt.hour == hour_selected]
 
 # SETTING THE ZOOM LOCATIONS 
 zoom_level = 12
-bkk = [ 13.7456058, 100.5341187]
+bkk = [13.7456058, 100.5341187]
 
 
 st.write('''**All BKK City from %i:00 and %i:00**''' % (hour_selected, (hour_selected + 1) % 24))
