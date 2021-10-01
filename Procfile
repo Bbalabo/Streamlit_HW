@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run mysl.py
+web: sh setup.sh && streamlit run grab_bkk.py
