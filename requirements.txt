@@ -2,5 +2,5 @@ streamlit==0.89.0
 streamlit-folium==0.4.0
 folium==0.12.0
 pandas==1.1.5
-geopandas==0.9.0+107.gc82e709
+geopandas==0.9.0
 numpy==1.19.5
