@@ -1,4 +1,4 @@
-@st.cache(persist=True)
+
 import pandas as pd
 import geopandas as gp
 import folium as fo
