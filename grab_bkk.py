@@ -69,7 +69,7 @@ with row1_2:
     Examining how Grab pickups vary over time in Bangkok City's.
     By sliding the slider on the left you can view different slices of time and explore different transportation trends.
     """)
-
+st.write('APISADA TAWEEWONG')
 
 
 # FILTERING DATA BY HOUR SELECTED
@@ -108,7 +108,28 @@ map(data4, bkk[0], bkk[1], 11)
 st.write("** 05 JAN 2019 **" )
 map(data5, bkk[0], bkk[1], 11)  
 
-st.write('Apisada Taweewong 6130832521')
+# HISTOGRAM
+data = pd.concat([data1,data2,data3,data4,data5])
+
+hist2 = np.histogram(data[DATE_TIME].dt.hour, bins=23, range=(0, 23))[0]
+
+chart_data2 = pd.DataFrame({"Hour": range(23), "Amount of pick up per hours for 5 days": hist2})
+
+# LAYING OUT THE HISTOGRAM 
+
+st.write("")
+
+st.altair_chart(alt.Chart(chart_data2)
+    .mark_area(
+        interpolate='step-after',
+    ).encode(
+        x=alt.X("Hour:Q", scale=alt.Scale(nice=False)),
+        y=alt.Y("Amount of pick up per hours for 5 days:Q"),
+        tooltip=['Hour','Amount of pick up per hours for 5 days']
+    ).configure_mark(
+        opacity=0.5,
+        color='blue'
+    ), use_container_width=True)
 
 
 
