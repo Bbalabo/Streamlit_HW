@@ -118,7 +118,7 @@ chart_data2 = pd.DataFrame({"Hour": range(24), "Amount of pick up per hours for 
 # LAYING OUT THE HISTOGRAM 
 
 st.write("")
-
+st.write("**Breakdown of rides per hour for 5 days between %i:00 and %i:00**" % (hour_selected, (hour_selected + 1) % 24))
 st.altair_chart(alt.Chart(chart_data2)
     .mark_area(
         interpolate='step-after',
