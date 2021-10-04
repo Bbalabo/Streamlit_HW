@@ -111,9 +111,9 @@ map(data5, bkk[0], bkk[1], 11)
 # HISTOGRAM
 data = pd.concat([data1,data2,data3,data4,data5])
 
-hist2 = np.histogram(data[DATE_TIME].dt.hour, bins=23, range=(0, 23))[0]
+hist2 = np.histogram(data[DATE_TIME].dt.hour, bins=24, range=(0, 24))[0]
 
-chart_data2 = pd.DataFrame({"Hour": range(23), "Amount of pick up per hours for 5 days": hist2})
+chart_data2 = pd.DataFrame({"Hour": range(24), "Amount of pick up per hours for 5 days": hist2})
 
 # LAYING OUT THE HISTOGRAM 
 
